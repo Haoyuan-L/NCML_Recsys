@@ -8,6 +8,8 @@ Created on 22/11/17
 
 from Recommender_import_list import *
 from Conferences.WWW.NeuMF_our_interface.NeuMF_RecommenderWrapper import NeuMF_RecommenderWrapper
+from Conferences.IJCAI.DMF_our_interface.Movielens100KReader.Movielens100KReader import Movielens100KReader
+
 
 
 from ParameterTuning.run_parameter_search import runParameterSearch_Collaborative
@@ -79,20 +81,20 @@ def read_data_split_and_search(dataset_name,
 
 
     collaborative_algorithm_list = [
-        Random,
-        TopPop,
-        UserKNNCFRecommender,
-        ItemKNNCFRecommender,
-        P3alphaRecommender,
-        RP3betaRecommender,
+        #Random,
+        #TopPop,
+        #UserKNNCFRecommender,
+        #ItemKNNCFRecommender,
+        #P3alphaRecommender,
+        #RP3betaRecommender,
         PureSVDRecommender,
         NMFRecommender,
-        IALSRecommender,
+        #IALSRecommender,
         MatrixFactorization_BPR_Cython,
         MatrixFactorization_FunkSVD_Cython,
-        EASE_R_Recommender,
-        SLIM_BPR_Cython,
-        SLIMElasticNetRecommender,
+        #EASE_R_Recommender,
+        #SLIM_BPR_Cython,
+        #SLIMElasticNetRecommender,
         ]
 
     metric_to_optimize = "HIT_RATE"
@@ -145,7 +147,7 @@ def read_data_split_and_search(dataset_name,
         try:
 
 
-            if dataset_name == "movielens1m":
+            if dataset_name == "movielens100k":
                 num_factors = 64
             elif dataset_name == "pinterest":
                 num_factors = 16
@@ -267,7 +269,7 @@ if __name__ == '__main__':
 
 
 
-    dataset_list = ["movielens1m", "pinterest"]
+    dataset_list = ['movielens100k']
 
 
     for dataset_name in dataset_list:
