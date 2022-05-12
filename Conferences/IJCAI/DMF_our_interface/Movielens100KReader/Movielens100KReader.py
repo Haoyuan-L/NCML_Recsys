@@ -63,10 +63,10 @@ class Movielens100KReader:
             URM_train = URM_train + URM_validation
             URM_train, URM_validation = split_train_validation_leave_one_out_user_wise(URM_train, verbose=False)
 
-
             self.URM_DICT = {
                 "URM_train": URM_train,
                 "URM_test": URM_test,
+                
                 "URM_validation": URM_validation,
                 "URM_test_negative": URM_test_negative,
                 "URM_timestamp": URM_timestamp,

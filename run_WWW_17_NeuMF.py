@@ -8,7 +8,7 @@ Created on 22/11/17
 
 from Recommender_import_list import *
 from Conferences.WWW.NeuMF_our_interface.NeuMF_RecommenderWrapper import NeuMF_RecommenderWrapper
-from Conferences.IJCAI.DMF_our_interface.Movielens100KReader.Movielens100KReader import Movielens100KReader
+
 
 
 
@@ -37,15 +37,11 @@ def read_data_split_and_search(dataset_name,
     from Conferences.WWW.NeuMF_our_interface.Movielens1M.Movielens1MReader import Movielens1MReader
     from Conferences.WWW.NeuMF_our_interface.Pinterest.PinterestICCVReader import PinterestICCVReader
 
-
     result_folder_path = "result_experiments/{}/{}_{}/".format(CONFERENCE_NAME, ALGORITHM_NAME, dataset_name)
 
 
     if dataset_name == "movielens1m":
         dataset = Movielens1MReader(result_folder_path)
-
-    elif dataset_name == "pinterest":
-        dataset = PinterestICCVReader(result_folder_path)
 
 
     URM_train = dataset.URM_DICT["URM_train"].copy()
@@ -91,7 +87,7 @@ def read_data_split_and_search(dataset_name,
         NMFRecommender,
         #IALSRecommender,
         MatrixFactorization_BPR_Cython,
-        MatrixFactorization_FunkSVD_Cython,
+        #MatrixFactorization_FunkSVD_Cython,
         #EASE_R_Recommender,
         #SLIM_BPR_Cython,
         #SLIMElasticNetRecommender,
@@ -146,8 +142,7 @@ def read_data_split_and_search(dataset_name,
 
         try:
 
-
-            if dataset_name == "movielens100k":
+            if dataset_name == "movielens1m":
                 num_factors = 64
             elif dataset_name == "pinterest":
                 num_factors = 16
@@ -269,7 +264,7 @@ if __name__ == '__main__':
 
 
 
-    dataset_list = ['movielens100k']
+    dataset_list = ['movielens1m']
 
 
     for dataset_name in dataset_list:
