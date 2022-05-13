@@ -1,0 +1,32 @@
+\begin{tabular}{l|rrr|}
+\toprule
+{} &                    Train Time & \begin{tabular}{@{}c@{}}Recommendation\\Time\end{tabular} & \begin{tabular}{@{}c@{}}Recommendation\\Throughput\end{tabular} \\
+\midrule
+Random                &                             - &                                                  - &                                                  - \\
+TopPop                &                             - &                                                  - &                                                  - \\
+\midrule
+UserKNN CF cosine     &                             - &                                                  - &                                                  - \\
+UserKNN CF dice       &                             - &                                                  - &                                                  - \\
+UserKNN CF jaccard    &                             - &                                                  - &                                                  - \\
+UserKNN CF asymmetric &                             - &                                                  - &                                                  - \\
+UserKNN CF tversky    &                             - &                                                  - &                                                  - \\
+ItemKNN CF cosine     &                             - &                                                  - &                                                  - \\
+ItemKNN CF dice       &                             - &                                                  - &                                                  - \\
+ItemKNN CF jaccard    &                             - &                                                  - &                                                  - \\
+ItemKNN CF asymmetric &                             - &                                                  - &                                                  - \\
+ItemKNN CF tversky    &                             - &                                                  - &                                                  - \\
+P3alpha               &                             - &                                                  - &                                                  - \\
+RP3beta               &                             - &                                                  - &                                                  - \\
+\midrule
+EASE R                &                             - &                                                  - &                                                  - \\
+SLIM BPR              &                             - &                                                  - &                                                  - \\
+SLIM ElasticNet       &                             - &                                                  - &                                                  - \\
+MF BPR                &                             - &                                                  - &                                                  - \\
+MF FunkSVD            &                             - &                                                  - &                                                  - \\
+PureSVD               &                             - &                                                  - &                                                  - \\
+NMF                   &                             - &                                                  - &                                                  - \\
+IALS                  &                             - &                                                  - &                                                  - \\
+\midrule
+NeuMF                 &  8787.09 [sec] / 6.10 [hour]  &                         233.80 [sec] / 3.90 [min]  &                                                 26 \\
+\bottomrule
+\end{tabular}

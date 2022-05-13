@@ -1,0 +1,25 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m \\
+\midrule
+UserKNN CF cosine & - &           - \\
+\midrule
+UserKNN CF dice & - &           - \\
+\midrule
+UserKNN CF jaccard & - &           - \\
+\midrule
+UserKNN CF asymmetric & - &           - \\
+\midrule
+UserKNN CF tversky & - &           - \\
+\midrule
+ItemKNN CF cosine & - &           - \\
+\midrule
+ItemKNN CF dice & - &           - \\
+\midrule
+ItemKNN CF jaccard & - &           - \\
+\midrule
+ItemKNN CF asymmetric & - &           - \\
+\midrule
+ItemKNN CF tversky & - &           - \\
+\bottomrule
+\end{tabular}

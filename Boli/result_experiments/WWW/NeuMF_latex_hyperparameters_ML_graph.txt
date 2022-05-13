@@ -1,0 +1,25 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m \\
+\midrule
+P3alpha & - &           - \\
+\midrule
+RP3beta & - &           - \\
+\midrule
+EASE R  & - &           - \\
+\midrule
+SLIM BPR  & - &           - \\
+\midrule
+SLIM ElasticNet & - &           - \\
+\midrule
+MF BPR  & - &           - \\
+\midrule
+MF FunkSVD  & - &           - \\
+\midrule
+PureSVD & - &           - \\
+\midrule
+NMF & - &           - \\
+\midrule
+IALS & - &           - \\
+\bottomrule
+\end{tabular}

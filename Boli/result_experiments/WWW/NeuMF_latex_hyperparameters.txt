@@ -1,0 +1,64 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m \\
+\midrule
+Random & - &               - \\
+\midrule
+TopPop & - &               - \\
+\midrule
+UserKNN CF cosine & - &               - \\
+\midrule
+UserKNN CF dice & - &               - \\
+\midrule
+UserKNN CF jaccard & - &               - \\
+\midrule
+UserKNN CF asymmetric & - &               - \\
+\midrule
+UserKNN CF tversky & - &               - \\
+\midrule
+ItemKNN CF cosine & - &               - \\
+\midrule
+ItemKNN CF dice & - &               - \\
+\midrule
+ItemKNN CF jaccard & - &               - \\
+\midrule
+ItemKNN CF asymmetric & - &               - \\
+\midrule
+ItemKNN CF tversky & - &               - \\
+\midrule
+P3alpha & - &               - \\
+\midrule
+RP3beta & - &               - \\
+\midrule
+EASE R  & - &               - \\
+\midrule
+SLIM BPR  & - &               - \\
+\midrule
+SLIM ElasticNet & - &               - \\
+\midrule
+MF BPR  & - &               - \\
+\midrule
+MF FunkSVD  & - &               - \\
+\midrule
+PureSVD & - &               - \\
+\midrule
+NMF & - &               - \\
+\midrule
+IALS & - &               - \\
+\midrule
+\multirow{14}{*}{NeuMF} & epochs &               5 \\
+      & epochs gmf &               5 \\
+      & epochs mlp &              10 \\
+      & batch size &             256 \\
+      & num factors &              64 \\
+      & layers &  [256, 128, 64] \\
+      & reg mf &        0.00E+00 \\
+      & reg layers &       [0, 0, 0] \\
+      & num negatives &               4 \\
+      & learning rate &        1.00E-03 \\
+      & learning rate pretrain &        1.00E-03 \\
+      & learner &             sgd \\
+      & learner pretrain &            adam \\
+      & pretrain &            True \\
+\bottomrule
+\end{tabular}
