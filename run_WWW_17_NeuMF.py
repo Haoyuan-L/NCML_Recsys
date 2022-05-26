@@ -85,13 +85,13 @@ def read_data_split_and_search(dataset_name,
         #RP3betaRecommender,
         PureSVDRecommender,
         #NMFRecommender,
-        #IALSRecommender,
+        IALSRecommender,
         #MatrixFactorization_BPR_Cython,
         #MatrixFactorization_FunkSVD_Cython,
-        #EASE_R_Recommender,
+        EASE_R_Recommender,
         #SLIM_BPR_Cython,
-        #SLIMElasticNetRecommender,
-        ]
+        SLIMElasticNetRecommender,
+    ]
 
     metric_to_optimize = "HIT_RATE"
     n_cases = 50
