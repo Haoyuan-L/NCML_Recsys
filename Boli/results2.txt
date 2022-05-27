@@ -1,0 +1,1859 @@
+python approx_dot.py --embedding_dim 16 --num_users 4000 --num_items 4000 --first_layer_mult 1 --learning_rate 0.001 
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (394928, 2, 16)
+Num test examples:  (5072, 2, 16)   
+Num fresh examples:  (100000, 2, 16)
+Trivial model training RMSE:  1.1327974894302777
+Trivial model test RMSE:  1.127431817708312
+Trivial model fresh RMSE:  1.131510283113331
+Dot training RMSE:  0.8521862373967327
+Dot test RMSE:  0.8491783632500408
+Dot fresh RMSE:  0.849788170976614
+2022-05-27 10:34:20.980095: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 32)                0
+_________________________________________________________________
+dense (Dense)                (None, 32)                1056
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 136
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 9
+=================================================================
+Total params: 1,729
+Trainable params: 1,729
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+WARNING:tensorflow:Callbacks method `on_train_batch_begin` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_begin` time: 0.0010s). Check your callbacks.
+WARNING:tensorflow:Callbacks method `on_test_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_test_batch_end` time: 0.0010s). Check your callbacks.
+1543/1543 - 1s - loss: 1.0412 - val_loss: 0.9019
+Epoch 2/32
+1543/1543 - 1s - loss: 0.8574 - val_loss: 0.8358
+Epoch 3/32
+1543/1543 - 1s - loss: 0.8272 - val_loss: 0.8271
+Epoch 4/32
+1543/1543 - 1s - loss: 0.8203 - val_loss: 0.8244
+Epoch 5/32
+1543/1543 - 1s - loss: 0.8176 - val_loss: 0.8226
+Epoch 6/32
+1543/1543 - 1s - loss: 0.8157 - val_loss: 0.8262
+Epoch 7/32
+1543/1543 - 1s - loss: 0.8135 - val_loss: 0.8192
+Epoch 8/32
+1543/1543 - 1s - loss: 0.8118 - val_loss: 0.8259
+Epoch 9/32
+1543/1543 - 1s - loss: 0.8106 - val_loss: 0.8237
+Epoch 10/32
+1543/1543 - 1s - loss: 0.8095 - val_loss: 0.8209
+Epoch 11/32
+1543/1543 - 1s - loss: 0.8090 - val_loss: 0.8251
+Epoch 12/32
+1543/1543 - 1s - loss: 0.8075 - val_loss: 0.8156
+Epoch 13/32
+1543/1543 - 1s - loss: 0.8065 - val_loss: 0.8285
+Epoch 14/32
+1543/1543 - 1s - loss: 0.8058 - val_loss: 0.8310
+Epoch 15/32
+1543/1543 - 1s - loss: 0.8053 - val_loss: 0.8180
+Epoch 16/32
+1543/1543 - 1s - loss: 0.8051 - val_loss: 0.8244
+Epoch 17/32
+1543/1543 - 1s - loss: 0.8043 - val_loss: 0.8173
+Epoch 18/32
+1543/1543 - 1s - loss: 0.8036 - val_loss: 0.8172
+Epoch 19/32
+1543/1543 - 1s - loss: 0.8032 - val_loss: 0.8208
+Epoch 20/32
+1543/1543 - 1s - loss: 0.8026 - val_loss: 0.8196
+Epoch 21/32
+1543/1543 - 1s - loss: 0.8021 - val_loss: 0.8199
+Epoch 22/32
+1543/1543 - 1s - loss: 0.8016 - val_loss: 0.8152
+Epoch 23/32
+1543/1543 - 1s - loss: 0.8014 - val_loss: 0.8166
+Epoch 24/32
+1543/1543 - 1s - loss: 0.8006 - val_loss: 0.8164
+Epoch 25/32
+1543/1543 - 1s - loss: 0.8005 - val_loss: 0.8175
+Epoch 26/32
+1543/1543 - 1s - loss: 0.8000 - val_loss: 0.8174
+Epoch 27/32
+1543/1543 - 1s - loss: 0.7998 - val_loss: 0.8175
+Epoch 28/32
+1543/1543 - 1s - loss: 0.7999 - val_loss: 0.8160
+Epoch 29/32
+1543/1543 - 1s - loss: 0.7997 - val_loss: 0.8162
+Epoch 30/32
+1543/1543 - 1s - loss: 0.7993 - val_loss: 0.8212
+Epoch 31/32
+1543/1543 - 1s - loss: 0.7989 - val_loss: 0.8173
+Epoch 32/32
+1543/1543 - 1s - loss: 0.7988 - val_loss: 0.8153
+12342/12342 - 3s - loss: 0.7947
+159/159 - 0s - loss: 0.8153
+3125/3125 - 1s - loss: 0.8179
+MLP training RMSE:  0.8914598600964816
+MLP test RMSE:  0.9029645559487782
+MLP fresh RMSE:  0.904352635421452
+16      4000    4000    0.8914598600964816      1.1327974894302777      0.8521862373967327      0.9029645559487782      1.127431817708312       0.8491783632500408      0.904352635421452       1.131510283113
+331     0.849788170976614
+
+
+python approx_dot.py --embedding_dim 16 --num_users 8000 --num_items 8000 --first_layer_mult 1 --learning_rate 0.001 
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (592, 2, 16)
+Num test examples:  (799408, 2, 16)
+Num fresh examples:  (100000, 2, 16)
+Trivial model training RMSE:  1.1719785905763744
+Trivial model test RMSE:  1.1335779416061087
+Trivial model fresh RMSE:  1.131313714483483
+Dot training RMSE:  0.8768540779563803
+Dot test RMSE:  0.8508541213590403
+Dot fresh RMSE:  0.8496539729987755
+2022-05-27 10:47:58.392811: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 32)                0
+_________________________________________________________________
+dense (Dense)                (None, 32)                1056      
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 136
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 9
+=================================================================
+Total params: 1,729
+Trainable params: 1,729
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+3/3 - 1s - loss: 1.5355 - val_loss: 1.4294
+Epoch 2/32
+3/3 - 1s - loss: 1.4809 - val_loss: 1.3894
+Epoch 3/32
+3/3 - 1s - loss: 1.4396 - val_loss: 1.3598
+Epoch 4/32
+3/3 - 1s - loss: 1.4107 - val_loss: 1.3385
+Epoch 5/32
+3/3 - 1s - loss: 1.3904 - val_loss: 1.3240
+Epoch 6/32
+3/3 - 1s - loss: 1.3755 - val_loss: 1.3142
+Epoch 7/32
+3/3 - 1s - loss: 1.3659 - val_loss: 1.3070
+Epoch 8/32
+3/3 - 1s - loss: 1.3572 - val_loss: 1.3020
+Epoch 9/32
+3/3 - 1s - loss: 1.3522 - val_loss: 1.2985
+Epoch 10/32
+3/3 - 1s - loss: 1.3473 - val_loss: 1.2962
+Epoch 11/32
+3/3 - 1s - loss: 1.3425 - val_loss: 1.2947
+Epoch 12/32
+3/3 - 1s - loss: 1.3381 - val_loss: 1.2937
+Epoch 13/32
+3/3 - 1s - loss: 1.3331 - val_loss: 1.2931
+Epoch 14/32
+3/3 - 1s - loss: 1.3280 - val_loss: 1.2928
+Epoch 15/32
+3/3 - 1s - loss: 1.3229 - val_loss: 1.2927
+Epoch 16/32
+3/3 - 1s - loss: 1.3169 - val_loss: 1.2928
+Epoch 17/32
+3/3 - 1s - loss: 1.3115 - val_loss: 1.2932
+Epoch 18/32
+3/3 - 1s - loss: 1.3056 - val_loss: 1.2935
+Epoch 19/32
+3/3 - 1s - loss: 1.3000 - val_loss: 1.2939
+Epoch 20/32
+3/3 - 1s - loss: 1.2942 - val_loss: 1.2940
+Epoch 21/32
+3/3 - 1s - loss: 1.2884 - val_loss: 1.2943
+Epoch 22/32
+3/3 - 1s - loss: 1.2827 - val_loss: 1.2947
+Epoch 23/32
+3/3 - 1s - loss: 1.2770 - val_loss: 1.2950
+Epoch 24/32
+3/3 - 1s - loss: 1.2710 - val_loss: 1.2953
+Epoch 25/32
+3/3 - 1s - loss: 1.2655 - val_loss: 1.2953
+Epoch 26/32
+3/3 - 1s - loss: 1.2592 - val_loss: 1.2951
+Epoch 27/32
+3/3 - 1s - loss: 1.2528 - val_loss: 1.2951
+Epoch 28/32
+3/3 - 1s - loss: 1.2462 - val_loss: 1.2948
+Epoch 29/32
+3/3 - 1s - loss: 1.2396 - val_loss: 1.2947
+Epoch 30/32
+3/3 - 1s - loss: 1.2321 - val_loss: 1.2943
+Epoch 31/32
+3/3 - 1s - loss: 1.2260 - val_loss: 1.2941
+Epoch 32/32
+3/3 - 1s - loss: 1.2182 - val_loss: 1.2948
+19/19 - 0s - loss: 1.2116
+24982/24982 - 5s - loss: 1.2948
+3125/3125 - 1s - loss: 1.2904
+MLP training RMSE:  1.100725924940556
+MLP test RMSE:  1.1379077369249235
+MLP fresh RMSE:  1.1359527733784764
+16      8000    8000    1.100725924940556       1.1719785905763744      0.8768540779563803      1.1379077369249235      1.1335779416061087      0.8508541213590403      1.1359527733784764      1.131313714483
+483     0.8496539729987755
+
+
+python approx_dot.py --embedding_dim 16 --num_users 16000 --num_items 16000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (1185, 2, 16)
+Num test examples:  (1598815, 2, 16)
+Num fresh examples:  (100000, 2, 16)
+Trivial model training RMSE:  1.1537632337318948
+Trivial model test RMSE:  1.1307598551383893
+Trivial model fresh RMSE:  1.134713423564021
+Dot training RMSE:  0.8526614426887158
+Dot test RMSE:  0.850549867835332
+Dot fresh RMSE:  0.8542500986141319
+2022-05-27 10:53:55.935969: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 32)                0
+_________________________________________________________________
+dense (Dense)                (None, 32)                1056
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 136
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 9
+=================================================================
+Total params: 1,729
+Trainable params: 1,729
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+5/5 - 2s - loss: 1.3487 - val_loss: 1.3012
+Epoch 2/32
+5/5 - 2s - loss: 1.3251 - val_loss: 1.2956
+Epoch 3/32
+5/5 - 2s - loss: 1.3109 - val_loss: 1.2935
+Epoch 4/32
+5/5 - 2s - loss: 1.2993 - val_loss: 1.2921
+Epoch 5/32
+5/5 - 2s - loss: 1.2879 - val_loss: 1.2907
+Epoch 6/32
+5/5 - 2s - loss: 1.2767 - val_loss: 1.2894
+Epoch 7/32
+5/5 - 2s - loss: 1.2664 - val_loss: 1.2888
+Epoch 8/32
+5/5 - 2s - loss: 1.2563 - val_loss: 1.2883
+Epoch 9/32
+5/5 - 2s - loss: 1.2458 - val_loss: 1.2880
+Epoch 10/32
+5/5 - 2s - loss: 1.2352 - val_loss: 1.2876
+Epoch 11/32
+5/5 - 2s - loss: 1.2252 - val_loss: 1.2876
+Epoch 12/32
+5/5 - 2s - loss: 1.2139 - val_loss: 1.2879
+Epoch 13/32
+5/5 - 2s - loss: 1.2037 - val_loss: 1.2885
+Epoch 14/32
+5/5 - 2s - loss: 1.1939 - val_loss: 1.2894
+Epoch 15/32
+5/5 - 2s - loss: 1.1817 - val_loss: 1.2901
+Epoch 16/32
+5/5 - 2s - loss: 1.1705 - val_loss: 1.2909
+Epoch 17/32
+5/5 - 2s - loss: 1.1594 - val_loss: 1.2917
+Epoch 18/32
+5/5 - 2s - loss: 1.1473 - val_loss: 1.2931
+Epoch 19/32
+5/5 - 2s - loss: 1.1362 - val_loss: 1.2945
+Epoch 20/32
+5/5 - 2s - loss: 1.1240 - val_loss: 1.2966
+Epoch 21/32
+5/5 - 2s - loss: 1.1122 - val_loss: 1.2986
+Epoch 22/32
+5/5 - 2s - loss: 1.0991 - val_loss: 1.3014
+Epoch 23/32
+5/5 - 2s - loss: 1.0862 - val_loss: 1.3042
+Epoch 24/32
+5/5 - 2s - loss: 1.0731 - val_loss: 1.3078
+Epoch 25/32
+5/5 - 2s - loss: 1.0598 - val_loss: 1.3110
+Epoch 26/32
+5/5 - 2s - loss: 1.0454 - val_loss: 1.3138
+Epoch 27/32
+5/5 - 2s - loss: 1.0317 - val_loss: 1.3170
+Epoch 28/32
+5/5 - 2s - loss: 1.0179 - val_loss: 1.3208
+Epoch 29/32
+5/5 - 2s - loss: 1.0033 - val_loss: 1.3240
+Epoch 30/32
+5/5 - 2s - loss: 0.9892 - val_loss: 1.3284
+Epoch 31/32
+5/5 - 2s - loss: 0.9746 - val_loss: 1.3314
+Epoch 32/32
+5/5 - 2s - loss: 0.9608 - val_loss: 1.3347
+38/38 - 0s - loss: 0.9488
+49963/49963 - 13s - loss: 1.3347
+3125/3125 - 1s - loss: 1.3409
+MLP training RMSE:  0.9740757522929822
+MLP test RMSE:  1.1552888122722182
+MLP fresh RMSE:  1.1579724447170576
+16      16000   16000   0.9740757522929822      1.1537632337318948      0.8526614426887158      1.1552888122722182      1.1307598551383893      0.850549867835332       1.1579724447170576      1.134713423564
+021     0.8542500986141319
+
+
+python approx_dot.py --embedding_dim 16 --num_users 32000 --num_items 32000 --first_layer_mult 1 --learning_rate 0.001 
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (3199688, 2, 16)
+Num test examples:  (312, 2, 16)
+Num fresh examples:  (100000, 2, 16)
+Trivial model training RMSE:  1.1293598320525564
+Trivial model test RMSE:  1.096638736725316
+Trivial model fresh RMSE:  1.1296790734777562
+Dot training RMSE:  0.8504607735710965
+Dot test RMSE:  0.8350124076350365
+Dot fresh RMSE:  0.8507036565873017
+2022-05-27 11:12:04.144610: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 32)                0
+_________________________________________________________________
+dense (Dense)                (None, 32)                1056
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 136
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 9
+=================================================================
+Total params: 1,729
+Trainable params: 1,729
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+12499/12499 - 5s - loss: 0.8559 - val_loss: 0.7691
+Epoch 2/32
+12499/12499 - 5s - loss: 0.8162 - val_loss: 0.7446
+Epoch 3/32
+12499/12499 - 5s - loss: 0.8128 - val_loss: 0.7577
+Epoch 4/32
+12499/12499 - 5s - loss: 0.8105 - val_loss: 0.7591
+Epoch 5/32
+12499/12499 - 5s - loss: 0.8081 - val_loss: 0.7658
+Epoch 6/32
+12499/12499 - 5s - loss: 0.8062 - val_loss: 0.7670
+Epoch 7/32
+12499/12499 - 5s - loss: 0.8043 - val_loss: 0.7650
+Epoch 8/32
+12499/12499 - 5s - loss: 0.8033 - val_loss: 0.7482
+Epoch 9/32
+12499/12499 - 5s - loss: 0.8023 - val_loss: 0.7720
+Epoch 10/32
+12499/12499 - 5s - loss: 0.8016 - val_loss: 0.7528
+Epoch 11/32
+12499/12499 - 5s - loss: 0.8011 - val_loss: 0.7324
+Epoch 12/32
+12499/12499 - 5s - loss: 0.8005 - val_loss: 0.7418
+Epoch 13/32
+12499/12499 - 5s - loss: 0.8002 - val_loss: 0.7421
+Epoch 14/32
+12499/12499 - 5s - loss: 0.8000 - val_loss: 0.7460
+Epoch 15/32
+12499/12499 - 5s - loss: 0.7996 - val_loss: 0.7580
+Epoch 16/32
+12499/12499 - 5s - loss: 0.7994 - val_loss: 0.7508
+Epoch 17/32
+12499/12499 - 5s - loss: 0.7990 - val_loss: 0.7573
+Epoch 18/32
+12499/12499 - 5s - loss: 0.7987 - val_loss: 0.7587
+Epoch 19/32
+12499/12499 - 5s - loss: 0.7985 - val_loss: 0.7482
+Epoch 20/32
+12499/12499 - 5s - loss: 0.7983 - val_loss: 0.7569
+Epoch 21/32
+12499/12499 - 5s - loss: 0.7981 - val_loss: 0.7528
+Epoch 22/32
+12499/12499 - 5s - loss: 0.7980 - val_loss: 0.7551
+Epoch 23/32
+12499/12499 - 5s - loss: 0.7977 - val_loss: 0.7683
+Epoch 24/32
+12499/12499 - 5s - loss: 0.7975 - val_loss: 0.7652
+Epoch 25/32
+12499/12499 - 5s - loss: 0.7973 - val_loss: 0.7619
+Epoch 26/32
+12499/12499 - 5s - loss: 0.7972 - val_loss: 0.7575
+Epoch 27/32
+12499/12499 - 5s - loss: 0.7971 - val_loss: 0.7686
+Epoch 28/32
+12499/12499 - 5s - loss: 0.7971 - val_loss: 0.7595
+Epoch 29/32
+12499/12499 - 5s - loss: 0.7968 - val_loss: 0.7675
+Epoch 30/32
+12499/12499 - 5s - loss: 0.7967 - val_loss: 0.7594
+Epoch 31/32
+12499/12499 - 5s - loss: 0.7967 - val_loss: 0.7561
+Epoch 32/32
+12499/12499 - 5s - loss: 0.7964 - val_loss: 0.7584
+WARNING:tensorflow:Callbacks method `on_test_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_test_batch_end` time: 0.0010s). Check your callbacks.
+99991/99991 - 25s - loss: 0.7961
+10/10 - 0s - loss: 0.7584
+3125/3125 - 1s - loss: 0.8054
+MLP training RMSE:  0.8922348865010347
+MLP test RMSE:  0.8708626136846183
+MLP fresh RMSE:  0.8974567201533968
+16      32000   32000   0.8922348865010347      1.1293598320525564      0.8504607735710965      0.8708626136846183      1.096638736725316       0.8350124076350365      0.8974567201533968      1.129679073477
+7562    0.8507036565873017
+
+
+python approx_dot.py --embedding_dim 16 --num_users 64000 --num_items 64000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (46, 2, 16)
+Num test examples:  (6399954, 2, 16)
+Num fresh examples:  (100000, 2, 16)
+Trivial model training RMSE:  1.065765809513247
+Trivial model test RMSE:  1.1304837518346982 
+Trivial model fresh RMSE:  1.1267092559243967
+Dot training RMSE:  0.891911393447195
+Dot test RMSE:  0.8497768390483983
+Dot fresh RMSE:  0.8512924424828154
+2022-05-27 12:24:38.246470: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 32)                0
+_________________________________________________________________
+dense (Dense)                (None, 32)                1056
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_2 (Dense)              (None, 8)                 136
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 9
+=================================================================
+Total params: 1,729
+Trainable params: 1,729
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+1/1 - 7s - loss: 1.3297 - val_loss: 1.3875
+Epoch 2/32
+1/1 - 7s - loss: 1.2988 - val_loss: 1.3814
+Epoch 3/32
+1/1 - 7s - loss: 1.2712 - val_loss: 1.3760
+Epoch 4/32
+1/1 - 6s - loss: 1.2445 - val_loss: 1.3711
+Epoch 5/32
+1/1 - 7s - loss: 1.2197 - val_loss: 1.3668
+Epoch 6/32
+1/1 - 7s - loss: 1.1960 - val_loss: 1.3630
+Epoch 7/32
+1/1 - 7s - loss: 1.1729 - val_loss: 1.3598
+Epoch 8/32
+1/1 - 6s - loss: 1.1505 - val_loss: 1.3569
+Epoch 9/32
+1/1 - 7s - loss: 1.1288 - val_loss: 1.3544
+Epoch 10/32
+1/1 - 7s - loss: 1.1076 - val_loss: 1.3523
+Epoch 11/32
+1/1 - 6s - loss: 1.0879 - val_loss: 1.3507
+Epoch 12/32
+1/1 - 7s - loss: 1.0687 - val_loss: 1.3493
+Epoch 13/32
+1/1 - 7s - loss: 1.0501 - val_loss: 1.3482
+Epoch 14/32
+1/1 - 7s - loss: 1.0319 - val_loss: 1.3474
+Epoch 15/32
+1/1 - 7s - loss: 1.0142 - val_loss: 1.3470
+Epoch 16/32
+1/1 - 6s - loss: 0.9969 - val_loss: 1.3469
+Epoch 17/32
+1/1 - 7s - loss: 0.9797 - val_loss: 1.3470
+Epoch 18/32
+1/1 - 6s - loss: 0.9630 - val_loss: 1.3473
+Epoch 19/32
+1/1 - 7s - loss: 0.9467 - val_loss: 1.3479
+Epoch 20/32
+1/1 - 7s - loss: 0.9314 - val_loss: 1.3487
+Epoch 21/32
+1/1 - 6s - loss: 0.9183 - val_loss: 1.3499
+Epoch 22/32
+1/1 - 6s - loss: 0.9059 - val_loss: 1.3513
+Epoch 23/32
+1/1 - 6s - loss: 0.8935 - val_loss: 1.3531
+Epoch 24/32
+1/1 - 7s - loss: 0.8813 - val_loss: 1.3549
+Epoch 25/32
+1/1 - 6s - loss: 0.8691 - val_loss: 1.3568
+Epoch 26/32
+1/1 - 6s - loss: 0.8577 - val_loss: 1.3588
+Epoch 27/32
+1/1 - 6s - loss: 0.8464 - val_loss: 1.3608
+Epoch 28/32
+1/1 - 7s - loss: 0.8357 - val_loss: 1.3629
+Epoch 29/32
+1/1 - 6s - loss: 0.8255 - val_loss: 1.3650
+Epoch 30/32
+1/1 - 6s - loss: 0.8153 - val_loss: 1.3669
+Epoch 31/32
+1/1 - 7s - loss: 0.8060 - val_loss: 1.3686
+Epoch 32/32
+1/1 - 6s - loss: 0.7973 - val_loss: 1.3701
+2/2 - 0s - loss: 0.7883
+199999/199999 - 51s - loss: 1.3701
+3125/3125 - 1s - loss: 1.3599
+MLP training RMSE:  0.8878375150385014
+MLP test RMSE:  1.1704957092871355
+MLP fresh RMSE:  1.1661580316684481
+16      64000   64000   0.8878375150385014      1.065765809513247       0.891911393447195       1.1704957092871355      1.1304837518346982      0.8497768390483983      1.1661580316684481      1.126709255924
+3967    0.8512924424828154
+
+
+python approx_dot.py --embedding_dim 32 --num_users 4000 --num_items 4000 --first_layer_mult 1 --learning_rate 0.001 
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (394928, 2, 32)
+Num test examples:  (5072, 2, 32)
+Num fresh examples:  (100000, 2, 32)
+Trivial model training RMSE:  1.1321412511273492
+Trivial model test RMSE:  1.1363995952276087
+Trivial model fresh RMSE:  1.1269399426049949
+Dot training RMSE:  0.8507182686140465
+Dot test RMSE:  0.8487531897839549
+Dot fresh RMSE:  0.8477437243256944
+2022-05-27 10:41:39.118807: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 64)                0
+_________________________________________________________________
+dense (Dense)                (None, 64)                4160
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 17
+=================================================================
+Total params: 6,785
+Trainable params: 6,785
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+1543/1543 - 1s - loss: 1.0890 - val_loss: 0.9035
+Epoch 2/32
+1543/1543 - 1s - loss: 0.8857 - val_loss: 0.8383
+Epoch 3/32
+1543/1543 - 1s - loss: 0.8371 - val_loss: 0.8154
+Epoch 4/32
+1543/1543 - 1s - loss: 0.8173 - val_loss: 0.8097
+Epoch 5/32
+1543/1543 - 1s - loss: 0.8081 - val_loss: 0.7998
+Epoch 6/32
+1543/1543 - 1s - loss: 0.8030 - val_loss: 0.7962
+Epoch 7/32
+1543/1543 - 1s - loss: 0.7989 - val_loss: 0.8013
+Epoch 8/32
+1543/1543 - 1s - loss: 0.7966 - val_loss: 0.7929
+Epoch 9/32
+1543/1543 - 1s - loss: 0.7936 - val_loss: 0.7992
+Epoch 10/32
+1543/1543 - 1s - loss: 0.7916 - val_loss: 0.8015
+Epoch 11/32
+1543/1543 - 1s - loss: 0.7894 - val_loss: 0.7944
+Epoch 12/32
+1543/1543 - 1s - loss: 0.7877 - val_loss: 0.8021
+Epoch 13/32
+1543/1543 - 1s - loss: 0.7861 - val_loss: 0.8036
+Epoch 14/32
+1543/1543 - 1s - loss: 0.7847 - val_loss: 0.7977
+Epoch 15/32
+1543/1543 - 1s - loss: 0.7838 - val_loss: 0.7953
+Epoch 16/32
+1543/1543 - 1s - loss: 0.7818 - val_loss: 0.7954
+Epoch 17/32
+1543/1543 - 1s - loss: 0.7810 - val_loss: 0.7941
+Epoch 18/32
+1543/1543 - 1s - loss: 0.7800 - val_loss: 0.7997
+Epoch 19/32
+1543/1543 - 1s - loss: 0.7787 - val_loss: 0.7971
+Epoch 20/32
+1543/1543 - 1s - loss: 0.7781 - val_loss: 0.7926
+Epoch 21/32
+1543/1543 - 1s - loss: 0.7771 - val_loss: 0.7923
+Epoch 22/32
+1543/1543 - 1s - loss: 0.7768 - val_loss: 0.7977
+Epoch 23/32
+1543/1543 - 1s - loss: 0.7751 - val_loss: 0.7924
+Epoch 24/32
+1543/1543 - 1s - loss: 0.7742 - val_loss: 0.7962
+Epoch 25/32
+1543/1543 - 1s - loss: 0.7736 - val_loss: 0.7909
+Epoch 26/32
+1543/1543 - 1s - loss: 0.7729 - val_loss: 0.7894
+Epoch 27/32
+1543/1543 - 1s - loss: 0.7719 - val_loss: 0.7888
+Epoch 28/32
+1543/1543 - 1s - loss: 0.7717 - val_loss: 0.7880
+Epoch 29/32
+1543/1543 - 1s - loss: 0.7711 - val_loss: 0.7889
+Epoch 30/32
+1543/1543 - 1s - loss: 0.7702 - val_loss: 0.7875
+Epoch 31/32
+1543/1543 - 1s - loss: 0.7692 - val_loss: 0.7935
+Epoch 32/32
+1543/1543 - 1s - loss: 0.7697 - val_loss: 0.7954
+12342/12342 - 3s - loss: 0.7656
+159/159 - 0s - loss: 0.7954
+3125/3125 - 1s - loss: 0.8179
+MLP training RMSE:  0.8750045980605157
+MLP test RMSE:  0.8918291284089778
+MLP fresh RMSE:  0.9043766917520661
+32      4000    4000    0.8750045980605157      1.1321412511273492      0.8507182686140465      0.8918291284089778      1.1363995952276087      0.8487531897839549      0.9043766917520661      1.126939942604
+9949    0.8477437243256944
+
+
+python approx_dot.py --embedding_dim 32 --num_users 8000 --num_items 8000 --first_layer_mult 1 --learning_rate 0.001    
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (592, 2, 32)
+Num test examples:  (799408, 2, 32)
+Num fresh examples:  (100000, 2, 32)
+Trivial model training RMSE:  1.1452093732276443
+Trivial model test RMSE:  1.1307264053305852
+Trivial model fresh RMSE:  1.1348409776375326
+Dot training RMSE:  0.8365152345304954
+Dot test RMSE:  0.8501517003564654
+Dot fresh RMSE:  0.8528311100860533
+2022-05-27 10:54:21.160919: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 64)                0
+_________________________________________________________________
+dense (Dense)                (None, 64)                4160
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 17
+=================================================================
+Total params: 6,785
+Trainable params: 6,785
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+WARNING:tensorflow:Callbacks method `on_train_batch_begin` is slow compared to the batch time (batch time: 0.0000s vs `on_train_batch_begin` time: 0.0010s). Check your callbacks.
+3/3 - 1s - loss: 1.3283 - val_loss: 1.2955
+Epoch 2/32
+3/3 - 1s - loss: 1.2957 - val_loss: 1.2948
+Epoch 3/32
+3/3 - 1s - loss: 1.2739 - val_loss: 1.2938
+Epoch 4/32
+3/3 - 1s - loss: 1.2543 - val_loss: 1.2936
+Epoch 5/32
+3/3 - 1s - loss: 1.2348 - val_loss: 1.2932
+Epoch 6/32
+3/3 - 1s - loss: 1.2184 - val_loss: 1.2931
+Epoch 7/32
+3/3 - 1s - loss: 1.2011 - val_loss: 1.2931
+Epoch 8/32
+3/3 - 1s - loss: 1.1851 - val_loss: 1.2934
+Epoch 9/32
+3/3 - 1s - loss: 1.1680 - val_loss: 1.2941
+Epoch 10/32
+3/3 - 1s - loss: 1.1515 - val_loss: 1.2950
+Epoch 11/32
+3/3 - 1s - loss: 1.1338 - val_loss: 1.2964
+Epoch 12/32
+3/3 - 1s - loss: 1.1172 - val_loss: 1.2984
+Epoch 13/32
+3/3 - 1s - loss: 1.0994 - val_loss: 1.3001
+Epoch 14/32
+3/3 - 1s - loss: 1.0811 - val_loss: 1.3021
+Epoch 15/32
+3/3 - 1s - loss: 1.0623 - val_loss: 1.3053
+Epoch 16/32
+3/3 - 1s - loss: 1.0428 - val_loss: 1.3087
+Epoch 17/32
+3/3 - 1s - loss: 1.0225 - val_loss: 1.3127
+Epoch 18/32
+3/3 - 1s - loss: 1.0022 - val_loss: 1.3165
+Epoch 19/32
+3/3 - 1s - loss: 0.9808 - val_loss: 1.3204
+Epoch 20/32
+3/3 - 1s - loss: 0.9600 - val_loss: 1.3249
+Epoch 21/32
+3/3 - 1s - loss: 0.9371 - val_loss: 1.3304
+Epoch 22/32
+3/3 - 1s - loss: 0.9145 - val_loss: 1.3382
+Epoch 23/32
+3/3 - 1s - loss: 0.8909 - val_loss: 1.3460
+Epoch 24/32
+3/3 - 1s - loss: 0.8671 - val_loss: 1.3546
+Epoch 25/32
+3/3 - 1s - loss: 0.8419 - val_loss: 1.3627
+Epoch 26/32
+3/3 - 1s - loss: 0.8165 - val_loss: 1.3702
+Epoch 27/32
+3/3 - 1s - loss: 0.7900 - val_loss: 1.3789
+Epoch 28/32
+3/3 - 1s - loss: 0.7649 - val_loss: 1.3897
+Epoch 29/32
+3/3 - 1s - loss: 0.7377 - val_loss: 1.4013
+Epoch 30/32
+3/3 - 1s - loss: 0.7121 - val_loss: 1.4135
+Epoch 31/32
+3/3 - 1s - loss: 0.6853 - val_loss: 1.4245
+Epoch 32/32
+3/3 - 1s - loss: 0.6584 - val_loss: 1.4364
+19/19 - 0s - loss: 0.6357
+24982/24982 - 6s - loss: 1.4364
+3125/3125 - 1s - loss: 1.4458
+MLP training RMSE:  0.7973060937803375
+MLP test RMSE:  1.1985081359657153
+MLP fresh RMSE:  1.2024089118893753
+32      8000    8000    0.7973060937803375      1.1452093732276443      0.8365152345304954      1.1985081359657153      1.1307264053305852      0.8501517003564654      1.2024089118893753      1.134840977637
+5326    0.8528311100860533
+
+
+python approx_dot.py --embedding_dim 32 --num_users 16000 --num_items 16000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (1185, 2, 32)
+Num test examples:  (1598815, 2, 32)
+Num fresh examples:  (100000, 2, 32)
+Trivial model training RMSE:  1.108117568666975
+Trivial model test RMSE:  1.1294474482694496
+Trivial model fresh RMSE:  1.129143007045796
+Dot training RMSE:  0.8535475414150181
+Dot test RMSE:  0.8500780657918403
+Dot fresh RMSE:  0.849877134685301
+2022-05-27 11:01:10.344860: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 64)                0
+_________________________________________________________________
+dense (Dense)                (None, 64)                4160
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 17
+=================================================================
+Total params: 6,785
+Trainable params: 6,785
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+5/5 - 2s - loss: 1.2429 - val_loss: 1.2959
+Epoch 2/32
+5/5 - 2s - loss: 1.2065 - val_loss: 1.2945
+Epoch 3/32
+5/5 - 2s - loss: 1.1816 - val_loss: 1.2931
+Epoch 4/32
+5/5 - 2s - loss: 1.1598 - val_loss: 1.2937
+Epoch 5/32
+5/5 - 2s - loss: 1.1391 - val_loss: 1.2950
+Epoch 6/32
+5/5 - 2s - loss: 1.1184 - val_loss: 1.2968
+Epoch 7/32
+5/5 - 2s - loss: 1.0972 - val_loss: 1.2994
+Epoch 8/32
+5/5 - 2s - loss: 1.0753 - val_loss: 1.3028
+Epoch 9/32
+5/5 - 2s - loss: 1.0529 - val_loss: 1.3083
+Epoch 10/32
+5/5 - 2s - loss: 1.0295 - val_loss: 1.3137
+Epoch 11/32
+5/5 - 2s - loss: 1.0051 - val_loss: 1.3199
+Epoch 12/32
+5/5 - 2s - loss: 0.9794 - val_loss: 1.3280
+Epoch 13/32
+5/5 - 2s - loss: 0.9528 - val_loss: 1.3372
+Epoch 14/32
+5/5 - 2s - loss: 0.9260 - val_loss: 1.3457
+Epoch 15/32
+5/5 - 2s - loss: 0.8979 - val_loss: 1.3552
+Epoch 16/32
+5/5 - 2s - loss: 0.8696 - val_loss: 1.3632
+Epoch 17/32
+5/5 - 2s - loss: 0.8398 - val_loss: 1.3753
+Epoch 18/32
+5/5 - 2s - loss: 0.8092 - val_loss: 1.3845
+Epoch 19/32
+5/5 - 2s - loss: 0.7784 - val_loss: 1.3922
+Epoch 20/32
+5/5 - 2s - loss: 0.7483 - val_loss: 1.4014
+Epoch 21/32
+5/5 - 2s - loss: 0.7189 - val_loss: 1.4106
+Epoch 22/32
+5/5 - 2s - loss: 0.6866 - val_loss: 1.4215
+Epoch 23/32
+5/5 - 2s - loss: 0.6569 - val_loss: 1.4298
+Epoch 24/32
+5/5 - 2s - loss: 0.6268 - val_loss: 1.4406
+Epoch 25/32
+5/5 - 2s - loss: 0.5942 - val_loss: 1.4498
+Epoch 26/32
+5/5 - 2s - loss: 0.5638 - val_loss: 1.4608
+Epoch 27/32
+5/5 - 2s - loss: 0.5312 - val_loss: 1.4707
+Epoch 28/32
+5/5 - 2s - loss: 0.5004 - val_loss: 1.4825
+Epoch 29/32
+5/5 - 2s - loss: 0.4702 - val_loss: 1.4978
+Epoch 30/32
+5/5 - 2s - loss: 0.4396 - val_loss: 1.5101
+Epoch 31/32
+5/5 - 2s - loss: 0.4109 - val_loss: 1.5221
+Epoch 32/32
+5/5 - 2s - loss: 0.3824 - val_loss: 1.5394
+38/38 - 0s - loss: 0.3591
+49963/49963 - 12s - loss: 1.5394
+3125/3125 - 1s - loss: 1.5352
+MLP training RMSE:  0.599208461668178
+MLP test RMSE:  1.2407165070808857
+MLP fresh RMSE:  1.239044531827818
+32      16000   16000   0.599208461668178       1.108117568666975       0.8535475414150181      1.2407165070808857      1.1294474482694496      0.8500780657918403      1.239044531827818       1.129143007045
+796     0.849877134685301
+
+
+python approx_dot.py --embedding_dim 32 --num_users 32000 --num_items 32000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (3199688, 2, 32)
+Num test examples:  (312, 2, 32)
+Num fresh examples:  (100000, 2, 32)
+Trivial model training RMSE:  1.13215823524563
+Trivial model test RMSE:  1.1367978242041807
+Trivial model fresh RMSE:  1.1304438348005121
+Dot training RMSE:  0.8499737182248013
+Dot test RMSE:  0.8647580362777717
+Dot fresh RMSE:  0.8499364472004872
+2022-05-27 11:21:33.480393: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 64)                0
+_________________________________________________________________
+dense (Dense)                (None, 64)                4160
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 17
+=================================================================
+Total params: 6,785
+Trainable params: 6,785
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+12499/12499 - 6s - loss: 0.8784 - val_loss: 0.8855
+Epoch 2/32
+12499/12499 - 6s - loss: 0.8315 - val_loss: 0.8811
+Epoch 3/32
+12499/12499 - 6s - loss: 0.8243 - val_loss: 0.8841
+Epoch 4/32
+12499/12499 - 6s - loss: 0.8197 - val_loss: 0.8632
+Epoch 5/32
+12499/12499 - 6s - loss: 0.8167 - val_loss: 0.8611
+Epoch 6/32
+12499/12499 - 6s - loss: 0.8144 - val_loss: 0.8435
+Epoch 7/32
+12499/12499 - 6s - loss: 0.8126 - val_loss: 0.8496
+Epoch 8/32
+12499/12499 - 6s - loss: 0.8112 - val_loss: 0.8500
+Epoch 9/32
+12499/12499 - 6s - loss: 0.8100 - val_loss: 0.8451
+Epoch 10/32
+12499/12499 - 6s - loss: 0.8089 - val_loss: 0.8402
+Epoch 11/32
+12499/12499 - 6s - loss: 0.8079 - val_loss: 0.8564
+Epoch 12/32
+12499/12499 - 6s - loss: 0.8073 - val_loss: 0.8247
+Epoch 13/32
+12499/12499 - 6s - loss: 0.8067 - val_loss: 0.8463
+Epoch 14/32
+12499/12499 - 6s - loss: 0.8060 - val_loss: 0.8198
+Epoch 15/32
+12499/12499 - 6s - loss: 0.8055 - val_loss: 0.8525
+Epoch 16/32
+12499/12499 - 6s - loss: 0.8050 - val_loss: 0.8484
+Epoch 17/32
+12499/12499 - 6s - loss: 0.8045 - val_loss: 0.8206
+Epoch 18/32
+12499/12499 - 6s - loss: 0.8042 - val_loss: 0.8284
+Epoch 19/32
+12499/12499 - 6s - loss: 0.8038 - val_loss: 0.8388
+Epoch 20/32
+12499/12499 - 6s - loss: 0.8035 - val_loss: 0.8420
+Epoch 21/32
+12499/12499 - 6s - loss: 0.8032 - val_loss: 0.8372
+Epoch 22/32
+12499/12499 - 6s - loss: 0.8029 - val_loss: 0.8255
+Epoch 23/32
+12499/12499 - 6s - loss: 0.8027 - val_loss: 0.8189
+Epoch 24/32
+12499/12499 - 6s - loss: 0.8023 - val_loss: 0.8405
+Epoch 25/32
+12499/12499 - 6s - loss: 0.8022 - val_loss: 0.8406
+Epoch 26/32
+12499/12499 - 6s - loss: 0.8019 - val_loss: 0.8350
+Epoch 27/32
+12499/12499 - 6s - loss: 0.8019 - val_loss: 0.8290
+Epoch 28/32
+12499/12499 - 6s - loss: 0.8016 - val_loss: 0.8239
+Epoch 29/32
+12499/12499 - 6s - loss: 0.8014 - val_loss: 0.8167
+Epoch 30/32
+12499/12499 - 6s - loss: 0.8013 - val_loss: 0.8273
+Epoch 31/32
+12499/12499 - 6s - loss: 0.8011 - val_loss: 0.8151
+Epoch 32/32
+12499/12499 - 6s - loss: 0.8011 - val_loss: 0.8241
+99991/99991 - 25s - loss: 0.7983
+10/10 - 0s - loss: 0.8241
+3125/3125 - 1s - loss: 0.8155
+MLP training RMSE:  0.8934503546500865
+MLP test RMSE:  0.9077748591224237
+MLP fresh RMSE:  0.9030526419299595
+32      32000   32000   0.8934503546500865      1.13215823524563        0.8499737182248013      0.9077748591224237      1.1367978242041807      0.8647580362777717      0.9030526419299595      1.130443834800
+5121    0.8499364472004872
+
+
+(base) C:\Users\bolib\PycharmProjects\NCML_Recsys\Conferences\WWW\NeuMF_github>python approx_dot.py --embedding_dim 32 --num_users 64000 --num_items 64000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (46, 2, 32)
+Num test examples:  (6399954, 2, 32)
+Num fresh examples:  (100000, 2, 32)
+Trivial model training RMSE:  1.1727193144128338
+Trivial model test RMSE:  1.1297474376081746
+Trivial model fresh RMSE:  1.1314135411985287
+Dot training RMSE:  0.9929208761244951
+Dot test RMSE:  0.8500708629321851
+Dot fresh RMSE:  0.8495488875238465
+2022-05-27 12:41:29.242926: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 64)                0
+_________________________________________________________________
+dense (Dense)                (None, 64)                4160
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                528
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 17
+=================================================================
+Total params: 6,785
+Trainable params: 6,785
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+1/1 - 7s - loss: 1.3843 - val_loss: 1.3195
+Epoch 2/32
+1/1 - 7s - loss: 1.3276 - val_loss: 1.3131
+Epoch 3/32
+1/1 - 7s - loss: 1.2797 - val_loss: 1.3085
+Epoch 4/32
+1/1 - 7s - loss: 1.2365 - val_loss: 1.3053
+Epoch 5/32
+1/1 - 7s - loss: 1.1995 - val_loss: 1.3032
+Epoch 6/32
+1/1 - 7s - loss: 1.1645 - val_loss: 1.3018
+Epoch 7/32
+1/1 - 7s - loss: 1.1321 - val_loss: 1.3010
+Epoch 8/32
+1/1 - 7s - loss: 1.1024 - val_loss: 1.3009
+Epoch 9/32
+1/1 - 7s - loss: 1.0747 - val_loss: 1.3012
+Epoch 10/32
+1/1 - 7s - loss: 1.0476 - val_loss: 1.3019
+Epoch 11/32
+1/1 - 7s - loss: 1.0206 - val_loss: 1.3029
+Epoch 12/32
+1/1 - 7s - loss: 0.9939 - val_loss: 1.3042
+Epoch 13/32
+1/1 - 7s - loss: 0.9671 - val_loss: 1.3057
+Epoch 14/32
+1/1 - 7s - loss: 0.9401 - val_loss: 1.3074
+Epoch 15/32
+1/1 - 8s - loss: 0.9140 - val_loss: 1.3094
+Epoch 16/32
+1/1 - 9s - loss: 0.8879 - val_loss: 1.3116
+Epoch 17/32
+1/1 - 9s - loss: 0.8614 - val_loss: 1.3141
+Epoch 18/32
+1/1 - 9s - loss: 0.8343 - val_loss: 1.3168
+Epoch 19/32
+1/1 - 9s - loss: 0.8065 - val_loss: 1.3197
+Epoch 20/32
+1/1 - 9s - loss: 0.7786 - val_loss: 1.3229
+Epoch 21/32
+1/1 - 9s - loss: 0.7502 - val_loss: 1.3262
+Epoch 22/32
+1/1 - 9s - loss: 0.7209 - val_loss: 1.3298
+Epoch 23/32
+1/1 - 9s - loss: 0.6918 - val_loss: 1.3338
+Epoch 24/32
+1/1 - 9s - loss: 0.6629 - val_loss: 1.3381
+Epoch 25/32
+1/1 - 9s - loss: 0.6341 - val_loss: 1.3428
+Epoch 26/32
+1/1 - 8s - loss: 0.6047 - val_loss: 1.3479
+Epoch 27/32
+1/1 - 8s - loss: 0.5756 - val_loss: 1.3533
+Epoch 28/32
+1/1 - 8s - loss: 0.5480 - val_loss: 1.3591
+Epoch 29/32
+1/1 - 7s - loss: 0.5206 - val_loss: 1.3652
+Epoch 30/32
+1/1 - 7s - loss: 0.4929 - val_loss: 1.3715
+Epoch 31/32
+1/1 - 7s - loss: 0.4656 - val_loss: 1.3783
+Epoch 32/32
+1/1 - 7s - loss: 0.4395 - val_loss: 1.3854
+2/2 - 0s - loss: 0.4140
+199999/199999 - 51s - loss: 1.3855
+3125/3125 - 1s - loss: 1.3922
+MLP training RMSE:  0.643420956599514
+MLP test RMSE:  1.1770589989141342
+MLP fresh RMSE:  1.179936363799581
+32      64000   64000   0.643420956599514       1.1727193144128338      0.9929208761244951      1.1770589989141342      1.1297474376081746      0.8500708629321851      1.179936363799581       1.131413541198
+5287    0.8495488875238465
+
+
+python approx_dot.py --embedding_dim 64 --num_users 4000 --num_items 4000 --first_layer_mult 1 --learning_rate 0.001    
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (394928, 2, 64)
+Num test examples:  (5072, 2, 64)
+Num fresh examples:  (100000, 2, 64)
+Trivial model training RMSE:  1.1287162700245021
+Trivial model test RMSE:  1.1189467006113978
+Trivial model fresh RMSE:  1.1326647277831163
+Dot training RMSE:  0.8491631474362077
+Dot test RMSE:  0.8515369536478403
+Dot fresh RMSE:  0.8531808244936097
+2022-05-27 11:30:12.026686: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 128)               0
+_________________________________________________________________
+dense (Dense)                (None, 128)               16512
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 33
+=================================================================
+Total params: 26,881
+Trainable params: 26,881
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+1543/1543 - 1s - loss: 1.1595 - val_loss: 1.0310
+Epoch 2/32
+1543/1543 - 1s - loss: 0.9352 - val_loss: 0.9231
+Epoch 3/32
+1543/1543 - 1s - loss: 0.8650 - val_loss: 0.8856
+Epoch 4/32
+1543/1543 - 1s - loss: 0.8325 - val_loss: 0.8900
+Epoch 5/32
+1543/1543 - 1s - loss: 0.8145 - val_loss: 0.8710
+Epoch 6/32
+1543/1543 - 1s - loss: 0.8020 - val_loss: 0.8818
+Epoch 7/32
+1543/1543 - 1s - loss: 0.7919 - val_loss: 0.8622
+Epoch 8/32
+1543/1543 - 1s - loss: 0.7840 - val_loss: 0.8600
+Epoch 9/32
+1543/1543 - 1s - loss: 0.7776 - val_loss: 0.8537
+Epoch 10/32
+1543/1543 - 1s - loss: 0.7710 - val_loss: 0.8568
+Epoch 11/32
+1543/1543 - 1s - loss: 0.7666 - val_loss: 0.8545
+Epoch 12/32
+1543/1543 - 1s - loss: 0.7617 - val_loss: 0.8547
+Epoch 13/32
+1543/1543 - 1s - loss: 0.7576 - val_loss: 0.8549
+Epoch 14/32
+1543/1543 - 1s - loss: 0.7553 - val_loss: 0.8559
+Epoch 15/32
+1543/1543 - 1s - loss: 0.7511 - val_loss: 0.8592
+Epoch 16/32
+1543/1543 - 1s - loss: 0.7481 - val_loss: 0.8600
+Epoch 17/32
+1543/1543 - 1s - loss: 0.7453 - val_loss: 0.8628
+Epoch 18/32
+1543/1543 - 1s - loss: 0.7425 - val_loss: 0.8695
+Epoch 19/32
+1543/1543 - 1s - loss: 0.7393 - val_loss: 0.8557
+Epoch 20/32
+1543/1543 - 1s - loss: 0.7372 - val_loss: 0.8667
+Epoch 21/32
+1543/1543 - 1s - loss: 0.7354 - val_loss: 0.8663
+Epoch 22/32
+1543/1543 - 1s - loss: 0.7331 - val_loss: 0.8723
+Epoch 23/32
+1543/1543 - 1s - loss: 0.7309 - val_loss: 0.8682
+Epoch 24/32
+1543/1543 - 1s - loss: 0.7300 - val_loss: 0.8656
+Epoch 25/32
+1543/1543 - 1s - loss: 0.7274 - val_loss: 0.8597
+Epoch 26/32
+1543/1543 - 1s - loss: 0.7254 - val_loss: 0.8686
+Epoch 27/32
+1543/1543 - 1s - loss: 0.7245 - val_loss: 0.8719
+Epoch 28/32
+1543/1543 - 1s - loss: 0.7229 - val_loss: 0.8750
+Epoch 29/32
+1543/1543 - 1s - loss: 0.7213 - val_loss: 0.8661
+Epoch 30/32
+1543/1543 - 1s - loss: 0.7197 - val_loss: 0.8716
+Epoch 31/32
+1543/1543 - 1s - loss: 0.7187 - val_loss: 0.8725
+Epoch 32/32
+1543/1543 - 1s - loss: 0.7172 - val_loss: 0.8799
+12342/12342 - 3s - loss: 0.6952
+WARNING:tensorflow:Callbacks method `on_test_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_test_batch_end` time: 0.0010s). Check your callbacks.
+159/159 - 0s - loss: 0.8799
+WARNING:tensorflow:Callbacks method `on_test_batch_end` is slow compared to the batch time (batch time: 0.0000s vs `on_test_batch_end` time: 0.0010s). Check your callbacks.
+3125/3125 - 1s - loss: 0.9350
+MLP training RMSE:  0.8337707603306308
+MLP test RMSE:  0.9380266299890281
+MLP fresh RMSE:  0.9669681281801059
+64      4000    4000    0.8337707603306308      1.1287162700245021      0.8491631474362077      0.9380266299890281      1.1189467006113978      0.8515369536478403      0.9669681281801059      1.132664727783
+1163    0.8531808244936097
+
+
+python approx_dot.py --embedding_dim 64 --num_users 8000 --num_items 8000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (592, 2, 64)
+Num test examples:  (799408, 2, 64)
+Num fresh examples:  (100000, 2, 64)
+Trivial model training RMSE:  1.1406417499039405
+Trivial model test RMSE:  1.1295690555956373
+Trivial model fresh RMSE:  1.127568207368955
+Dot training RMSE:  0.8585046699446242
+Dot test RMSE:  0.8498449649622817
+Dot fresh RMSE:  0.8496973764291241
+2022-05-27 11:34:18.578718: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 128)               0
+_________________________________________________________________
+dense (Dense)                (None, 128)               16512
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 33
+=================================================================
+Total params: 26,881
+Trainable params: 26,881
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+3/3 - 1s - loss: 1.4437 - val_loss: 1.3053
+Epoch 2/32
+3/3 - 1s - loss: 1.3051 - val_loss: 1.2888
+Epoch 3/32
+3/3 - 1s - loss: 1.2563 - val_loss: 1.2894
+Epoch 4/32
+3/3 - 1s - loss: 1.2165 - val_loss: 1.2893
+Epoch 5/32
+3/3 - 1s - loss: 1.1748 - val_loss: 1.2899
+Epoch 6/32
+3/3 - 1s - loss: 1.1320 - val_loss: 1.2940
+Epoch 7/32
+3/3 - 1s - loss: 1.0903 - val_loss: 1.3008
+Epoch 8/32
+3/3 - 1s - loss: 1.0485 - val_loss: 1.3064
+Epoch 9/32
+3/3 - 1s - loss: 1.0012 - val_loss: 1.3109
+Epoch 10/32
+3/3 - 1s - loss: 0.9522 - val_loss: 1.3192
+Epoch 11/32
+3/3 - 1s - loss: 0.9024 - val_loss: 1.3303
+Epoch 12/32
+3/3 - 1s - loss: 0.8498 - val_loss: 1.3452
+Epoch 13/32
+3/3 - 1s - loss: 0.7960 - val_loss: 1.3655
+Epoch 14/32
+3/3 - 1s - loss: 0.7416 - val_loss: 1.3866
+Epoch 15/32
+3/3 - 1s - loss: 0.6827 - val_loss: 1.4088
+Epoch 16/32
+3/3 - 1s - loss: 0.6251 - val_loss: 1.4350
+Epoch 17/32
+3/3 - 1s - loss: 0.5677 - val_loss: 1.4629
+Epoch 18/32
+3/3 - 1s - loss: 0.5112 - val_loss: 1.4937
+Epoch 19/32
+3/3 - 1s - loss: 0.4548 - val_loss: 1.5198
+Epoch 20/32
+3/3 - 1s - loss: 0.4018 - val_loss: 1.5420
+Epoch 21/32
+3/3 - 1s - loss: 0.3510 - val_loss: 1.5667
+Epoch 22/32
+3/3 - 1s - loss: 0.3009 - val_loss: 1.5925
+Epoch 23/32
+3/3 - 1s - loss: 0.2550 - val_loss: 1.6137
+Epoch 24/32
+3/3 - 1s - loss: 0.2132 - val_loss: 1.6289
+Epoch 25/32
+3/3 - 1s - loss: 0.1750 - val_loss: 1.6434
+Epoch 26/32
+3/3 - 1s - loss: 0.1402 - val_loss: 1.6586
+Epoch 27/32
+3/3 - 1s - loss: 0.1112 - val_loss: 1.6717
+Epoch 28/32
+3/3 - 1s - loss: 0.0873 - val_loss: 1.6843
+Epoch 29/32
+3/3 - 1s - loss: 0.0679 - val_loss: 1.6907
+Epoch 30/32
+3/3 - 1s - loss: 0.0521 - val_loss: 1.6933
+Epoch 31/32
+3/3 - 1s - loss: 0.0400 - val_loss: 1.6944
+Epoch 32/32
+3/3 - 1s - loss: 0.0298 - val_loss: 1.6934
+19/19 - 0s - loss: 0.0235
+24982/24982 - 6s - loss: 1.6934
+3125/3125 - 1s - loss: 1.6822
+MLP training RMSE:  0.15336959192694788
+MLP test RMSE:  1.301313045267997
+MLP fresh RMSE:  1.2970068531340615
+64      8000    8000    0.15336959192694788     1.1406417499039405      0.8585046699446242      1.301313045267997       1.1295690555956373      0.8498449649622817      1.2970068531340615      1.127568207368
+955     0.8496973764291241
+
+
+python approx_dot.py --embedding_dim 64 --num_users 16000 --num_items 16000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (1185, 2, 64)
+Num test examples:  (1598815, 2, 64)
+Num fresh examples:  (100000, 2, 64)
+Trivial model training RMSE:  1.1193492540818504
+Trivial model test RMSE:  1.1297694283043445
+Trivial model fresh RMSE:  1.1281225590043884
+Dot training RMSE:  0.8393486718978417
+Dot test RMSE:  0.8501508401277318
+Dot fresh RMSE:  0.8490969311955983
+2022-05-27 11:44:16.262459: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 128)               0
+_________________________________________________________________
+dense (Dense)                (None, 128)               16512
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 33
+=================================================================
+Total params: 26,881
+Trainable params: 26,881
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+5/5 - 3s - loss: 1.2911 - val_loss: 1.2966
+Epoch 2/32
+5/5 - 2s - loss: 1.2204 - val_loss: 1.2948
+Epoch 3/32
+5/5 - 2s - loss: 1.1645 - val_loss: 1.2952
+Epoch 4/32
+5/5 - 2s - loss: 1.1170 - val_loss: 1.3012
+Epoch 5/32
+5/5 - 2s - loss: 1.0667 - val_loss: 1.3029
+Epoch 6/32
+5/5 - 2s - loss: 1.0134 - val_loss: 1.3122
+Epoch 7/32
+5/5 - 2s - loss: 0.9545 - val_loss: 1.3291
+Epoch 8/32
+5/5 - 2s - loss: 0.8873 - val_loss: 1.3504
+Epoch 9/32
+5/5 - 2s - loss: 0.8194 - val_loss: 1.3821
+Epoch 10/32
+5/5 - 2s - loss: 0.7432 - val_loss: 1.4182
+Epoch 11/32
+5/5 - 2s - loss: 0.6656 - val_loss: 1.4560
+Epoch 12/32
+5/5 - 2s - loss: 0.5884 - val_loss: 1.4941
+Epoch 13/32
+5/5 - 2s - loss: 0.5119 - val_loss: 1.5292
+Epoch 14/32
+5/5 - 2s - loss: 0.4352 - val_loss: 1.5579
+Epoch 15/32
+5/5 - 2s - loss: 0.3585 - val_loss: 1.5835
+Epoch 16/32
+5/5 - 2s - loss: 0.2885 - val_loss: 1.6025
+Epoch 17/32
+5/5 - 2s - loss: 0.2313 - val_loss: 1.6347
+Epoch 18/32
+5/5 - 2s - loss: 0.1768 - val_loss: 1.6543
+Epoch 19/32
+5/5 - 2s - loss: 0.1344 - val_loss: 1.6797
+Epoch 20/32
+5/5 - 2s - loss: 0.1020 - val_loss: 1.6913
+Epoch 21/32
+5/5 - 2s - loss: 0.0765 - val_loss: 1.7061
+Epoch 22/32
+5/5 - 2s - loss: 0.0558 - val_loss: 1.7255
+Epoch 23/32
+5/5 - 2s - loss: 0.0408 - val_loss: 1.7343
+Epoch 24/32
+5/5 - 2s - loss: 0.0289 - val_loss: 1.7399
+Epoch 25/32
+5/5 - 2s - loss: 0.0209 - val_loss: 1.7435
+Epoch 26/32
+5/5 - 2s - loss: 0.0149 - val_loss: 1.7479
+Epoch 27/32
+5/5 - 2s - loss: 0.0111 - val_loss: 1.7543
+Epoch 28/32
+5/5 - 2s - loss: 0.0074 - val_loss: 1.7614
+Epoch 29/32
+5/5 - 2s - loss: 0.0050 - val_loss: 1.7662
+Epoch 30/32
+5/5 - 2s - loss: 0.0035 - val_loss: 1.7672
+Epoch 31/32
+5/5 - 2s - loss: 0.0024 - val_loss: 1.7703
+Epoch 32/32
+5/5 - 2s - loss: 0.0016 - val_loss: 1.7738
+38/38 - 0s - loss: 0.0012
+49963/49963 - 13s - loss: 1.7738
+3125/3125 - 1s - loss: 1.7653
+MLP training RMSE:  0.03439257941700148
+MLP test RMSE:  1.3318516226998809
+MLP fresh RMSE:  1.3286397048806862
+64      16000   16000   0.03439257941700148     1.1193492540818504      0.8393486718978417      1.3318516226998809      1.1297694283043445      0.8501508401277318      1.3286397048806862      1.128122559004
+3884    0.8490969311955983
+
+
+python approx_dot.py --embedding_dim 64 --num_users 32000 --num_items 32000 --first_layer_mult 1 --learning_rate 0.001  
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (3199688, 2, 64)
+Num test examples:  (312, 2, 64)
+Num fresh examples:  (100000, 2, 64)
+Trivial model training RMSE:  1.1295505121524905
+Trivial model test RMSE:  1.161762677908751
+Trivial model fresh RMSE:  1.1296108920631491
+Dot training RMSE:  0.8498994789414621
+Dot test RMSE:  0.8880137395844396
+Dot fresh RMSE:  0.8459669936819092
+2022-05-27 12:10:54.181807: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 128)               0
+_________________________________________________________________
+dense (Dense)                (None, 128)               16512
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 33
+=================================================================
+Total params: 26,881
+Trainable params: 26,881
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+12499/12499 - 7s - loss: 0.9086 - val_loss: 0.8915
+Epoch 2/32
+12499/12499 - 7s - loss: 0.8256 - val_loss: 0.8843
+Epoch 3/32
+12499/12499 - 7s - loss: 0.8135 - val_loss: 0.9220
+Epoch 4/32
+12499/12499 - 7s - loss: 0.8059 - val_loss: 0.8735
+Epoch 5/32
+12499/12499 - 7s - loss: 0.8004 - val_loss: 0.8889
+Epoch 6/32
+12499/12499 - 7s - loss: 0.7965 - val_loss: 0.8451
+Epoch 7/32
+12499/12499 - 7s - loss: 0.7933 - val_loss: 0.8784
+Epoch 8/32
+12499/12499 - 7s - loss: 0.7905 - val_loss: 0.8650
+Epoch 9/32
+12499/12499 - 7s - loss: 0.7883 - val_loss: 0.8762
+Epoch 10/32
+12499/12499 - 7s - loss: 0.7861 - val_loss: 0.8637
+Epoch 11/32
+12499/12499 - 7s - loss: 0.7846 - val_loss: 0.8803
+Epoch 12/32
+12499/12499 - 7s - loss: 0.7831 - val_loss: 0.8532
+Epoch 13/32
+12499/12499 - 7s - loss: 0.7818 - val_loss: 0.8865
+Epoch 14/32
+12499/12499 - 7s - loss: 0.7806 - val_loss: 0.8483
+Epoch 15/32
+12499/12499 - 7s - loss: 0.7794 - val_loss: 0.8700
+Epoch 16/32
+12499/12499 - 8s - loss: 0.7787 - val_loss: 0.8476
+Epoch 17/32
+12499/12499 - 8s - loss: 0.7777 - val_loss: 0.8585
+Epoch 18/32
+12499/12499 - 8s - loss: 0.7769 - val_loss: 0.8619
+Epoch 19/32
+12499/12499 - 8s - loss: 0.7762 - val_loss: 0.9049
+Epoch 20/32
+12499/12499 - 8s - loss: 0.7755 - val_loss: 0.8710
+Epoch 21/32
+12499/12499 - 8s - loss: 0.7749 - val_loss: 0.8718
+Epoch 22/32
+12499/12499 - 8s - loss: 0.7743 - val_loss: 0.8904
+Epoch 23/32
+12499/12499 - 7s - loss: 0.7739 - val_loss: 0.8670
+Epoch 24/32
+12499/12499 - 8s - loss: 0.7735 - val_loss: 0.8749
+Epoch 25/32
+12499/12499 - 7s - loss: 0.7729 - val_loss: 0.8769
+Epoch 26/32
+12499/12499 - 7s - loss: 0.7725 - val_loss: 0.8981
+Epoch 27/32
+12499/12499 - 7s - loss: 0.7722 - val_loss: 0.8930
+Epoch 28/32
+12499/12499 - 7s - loss: 0.7717 - val_loss: 0.8746
+Epoch 29/32
+12499/12499 - 7s - loss: 0.7714 - val_loss: 0.8749
+Epoch 30/32
+12499/12499 - 7s - loss: 0.7710 - val_loss: 0.9077
+Epoch 31/32
+12499/12499 - 7s - loss: 0.7706 - val_loss: 0.9091
+Epoch 32/32
+12499/12499 - 7s - loss: 0.7703 - val_loss: 0.8916
+99991/99991 - 26s - loss: 0.7633
+10/10 - 0s - loss: 0.8916
+3125/3125 - 1s - loss: 0.7934
+MLP training RMSE:  0.8736426179140727
+MLP test RMSE:  0.9442650532672691
+MLP fresh RMSE:  0.8907112280613657
+64      32000   32000   0.8736426179140727      1.1295505121524905      0.8498994789414621      0.9442650532672691      1.161762677908751       0.8880137395844396      0.8907112280613657      1.129610892063
+1491    0.8459669936819092
+
+
+python approx_dot.py --embedding_dim 128 --num_users 4000 --num_items 4000 --first_layer_mult 1 --learning_rate 0.001    
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (394928, 2, 128)
+Num test examples:  (5072, 2, 128)
+Num fresh examples:  (100000, 2, 128)
+Trivial model training RMSE:  1.1311611283233995
+Trivial model test RMSE:  1.146383222410712
+Trivial model fresh RMSE:  1.1301541956303556
+Dot training RMSE:  0.8507981728127448
+Dot test RMSE:  0.8488402521616928
+Dot fresh RMSE:  0.8516741201750706
+2022-05-27 12:31:13.247126: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 256)               0
+_________________________________________________________________
+dense (Dense)                (None, 256)               65792
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               32896
+_________________________________________________________________
+dense_2 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 65
+=================================================================
+Total params: 107,009
+Trainable params: 107,009
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+1543/1543 - 1s - loss: 1.2547 - val_loss: 1.2134
+Epoch 2/32
+1543/1543 - 1s - loss: 1.0761 - val_loss: 1.0458
+Epoch 3/32
+1543/1543 - 1s - loss: 0.9258 - val_loss: 0.9859
+Epoch 4/32
+1543/1543 - 1s - loss: 0.8503 - val_loss: 0.9673
+Epoch 5/32
+1543/1543 - 1s - loss: 0.8065 - val_loss: 0.9743
+Epoch 6/32
+1543/1543 - 1s - loss: 0.7743 - val_loss: 0.9595
+Epoch 7/32
+1543/1543 - 1s - loss: 0.7479 - val_loss: 0.9552
+Epoch 8/32
+1543/1543 - 1s - loss: 0.7255 - val_loss: 0.9582
+Epoch 9/32
+1543/1543 - 1s - loss: 0.7066 - val_loss: 0.9599
+Epoch 10/32
+1543/1543 - 1s - loss: 0.6884 - val_loss: 0.9581
+Epoch 11/32
+1543/1543 - 1s - loss: 0.6737 - val_loss: 0.9724
+Epoch 12/32
+1543/1543 - 1s - loss: 0.6593 - val_loss: 0.9749
+Epoch 13/32
+1543/1543 - 1s - loss: 0.6460 - val_loss: 0.9794
+Epoch 14/32
+1543/1543 - 1s - loss: 0.6344 - val_loss: 0.9755
+Epoch 15/32
+1543/1543 - 1s - loss: 0.6225 - val_loss: 0.9965
+Epoch 16/32
+1543/1543 - 1s - loss: 0.6130 - val_loss: 0.9858
+Epoch 17/32
+1543/1543 - 1s - loss: 0.6032 - val_loss: 0.9911
+Epoch 18/32
+1543/1543 - 1s - loss: 0.5960 - val_loss: 0.9966
+Epoch 19/32
+1543/1543 - 1s - loss: 0.5866 - val_loss: 1.0330
+Epoch 20/32
+1543/1543 - 1s - loss: 0.5789 - val_loss: 1.0163
+Epoch 21/32
+1543/1543 - 1s - loss: 0.5723 - val_loss: 1.0297
+Epoch 22/32
+1543/1543 - 1s - loss: 0.5660 - val_loss: 1.0397
+Epoch 23/32
+1543/1543 - 1s - loss: 0.5608 - val_loss: 1.0334
+Epoch 24/32
+1543/1543 - 1s - loss: 0.5534 - val_loss: 1.0302
+Epoch 25/32
+1543/1543 - 1s - loss: 0.5487 - val_loss: 1.0503
+Epoch 26/32
+1543/1543 - 1s - loss: 0.5425 - val_loss: 1.0533
+Epoch 27/32
+1543/1543 - 1s - loss: 0.5378 - val_loss: 1.0662
+Epoch 28/32
+1543/1543 - 1s - loss: 0.5330 - val_loss: 1.0598
+Epoch 29/32
+1543/1543 - 1s - loss: 0.5290 - val_loss: 1.0766
+Epoch 30/32
+1543/1543 - 1s - loss: 0.5241 - val_loss: 1.0656
+Epoch 31/32
+1543/1543 - 1s - loss: 0.5205 - val_loss: 1.0891
+Epoch 32/32
+1543/1543 - 1s - loss: 0.5163 - val_loss: 1.0917
+12342/12342 - 4s - loss: 0.4605
+159/159 - 0s - loss: 1.0917
+3125/3125 - 2s - loss: 1.3527
+MLP training RMSE:  0.6786359567184567
+MLP test RMSE:  1.044828663884366
+MLP fresh RMSE:  1.1630592887637705
+128     4000    4000    0.6786359567184567      1.1311611283233995      0.8507981728127448      1.044828663884366       1.146383222410712       0.8488402521616928      1.1630592887637705      1.130154195630
+3556    0.8516741201750706
+
+
+python approx_dot.py --embedding_dim 128 --num_users 8000 --num_items 8000 --first_layer_mult 1 --learning_rate 0.001    
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (592, 2, 128)
+Num test examples:  (799408, 2, 128)
+Num fresh examples:  (100000, 2, 128)
+Trivial model training RMSE:  1.1747546005926797
+Trivial model test RMSE:  1.1287990533731254
+Trivial model fresh RMSE:  1.1287150043124778
+Dot training RMSE:  0.8922160398719665
+Dot test RMSE:  0.8496270006699643
+Dot fresh RMSE:  0.8503607491769757
+2022-05-27 12:35:57.385830: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 256)               0
+_________________________________________________________________
+dense (Dense)                (None, 256)               65792
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               32896
+_________________________________________________________________
+dense_2 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 65
+=================================================================
+Total params: 107,009
+Trainable params: 107,009
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+3/3 - 2s - loss: 1.4156 - val_loss: 1.3024
+Epoch 2/32
+3/3 - 1s - loss: 1.2718 - val_loss: 1.3001
+Epoch 3/32
+3/3 - 1s - loss: 1.1409 - val_loss: 1.2971
+Epoch 4/32
+3/3 - 2s - loss: 1.0316 - val_loss: 1.3128
+Epoch 5/32
+3/3 - 1s - loss: 0.9074 - val_loss: 1.3267
+Epoch 6/32
+3/3 - 1s - loss: 0.7664 - val_loss: 1.3640
+Epoch 7/32
+3/3 - 1s - loss: 0.6357 - val_loss: 1.4163
+Epoch 8/32
+3/3 - 2s - loss: 0.4939 - val_loss: 1.4929
+Epoch 9/32
+3/3 - 2s - loss: 0.3792 - val_loss: 1.5707
+Epoch 10/32
+3/3 - 2s - loss: 0.2799 - val_loss: 1.6303
+Epoch 11/32
+3/3 - 2s - loss: 0.1951 - val_loss: 1.6574
+Epoch 12/32
+3/3 - 1s - loss: 0.1281 - val_loss: 1.6549
+Epoch 13/32
+3/3 - 1s - loss: 0.0814 - val_loss: 1.6443
+Epoch 14/32
+3/3 - 1s - loss: 0.0523 - val_loss: 1.6353
+Epoch 15/32
+3/3 - 1s - loss: 0.0348 - val_loss: 1.6231
+Epoch 16/32
+3/3 - 1s - loss: 0.0232 - val_loss: 1.6185
+Epoch 17/32
+3/3 - 2s - loss: 0.0169 - val_loss: 1.6156
+Epoch 18/32
+3/3 - 1s - loss: 0.0129 - val_loss: 1.6116
+Epoch 19/32
+3/3 - 1s - loss: 0.0095 - val_loss: 1.6032
+Epoch 20/32
+3/3 - 1s - loss: 0.0067 - val_loss: 1.5972
+Epoch 21/32
+3/3 - 1s - loss: 0.0052 - val_loss: 1.5966
+Epoch 22/32
+3/3 - 2s - loss: 0.0041 - val_loss: 1.5979
+Epoch 23/32
+3/3 - 1s - loss: 0.0032 - val_loss: 1.6027
+Epoch 24/32
+3/3 - 1s - loss: 0.0025 - val_loss: 1.6051
+Epoch 25/32
+3/3 - 1s - loss: 0.0021 - val_loss: 1.6081
+Epoch 26/32
+3/3 - 1s - loss: 0.0017 - val_loss: 1.6072
+Epoch 27/32
+3/3 - 1s - loss: 0.0012 - val_loss: 1.6046
+Epoch 28/32
+3/3 - 1s - loss: 8.9639e-04 - val_loss: 1.6009
+Epoch 29/32
+3/3 - 1s - loss: 7.1381e-04 - val_loss: 1.6004
+Epoch 30/32
+3/3 - 1s - loss: 5.7168e-04 - val_loss: 1.6004
+Epoch 31/32
+3/3 - 1s - loss: 4.4203e-04 - val_loss: 1.6017
+Epoch 32/32
+3/3 - 2s - loss: 3.2096e-04 - val_loss: 1.6012
+19/19 - 0s - loss: 2.6854e-04
+24982/24982 - 8s - loss: 1.6012
+3125/3125 - 1s - loss: 1.6040
+MLP training RMSE:  0.016387124281060775
+MLP test RMSE:  1.265393506766515
+MLP fresh RMSE:  1.2664725679874724
+128     8000    8000    0.016387124281060775    1.1747546005926797      0.8922160398719665      1.265393506766515       1.1287990533731254      0.8496270006699643      1.2664725679874724      1.128715004312
+4778    0.8503607491769757
+
+
+python approx_dot.py --embedding_dim 128 --num_users 16000 --num_items 16000 --first_layer_mult 1 --learning_rate 0.001    
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (1185, 2, 128)
+Num test examples:  (1598815, 2, 128)
+Num fresh examples:  (100000, 2, 128)
+Trivial model training RMSE:  1.1070829981103647
+Trivial model test RMSE:  1.1301516148444117
+Trivial model fresh RMSE:  1.1318254163459278
+Dot training RMSE:  0.8413033918285293
+Dot test RMSE:  0.8496139336024365
+Dot fresh RMSE:  0.8491897727291341
+2022-05-27 12:43:09.724926: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in 
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 256)               0
+_________________________________________________________________
+dense (Dense)                (None, 256)               65792
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               32896
+_________________________________________________________________
+dense_2 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 65
+=================================================================
+Total params: 107,009
+Trainable params: 107,009
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+5/5 - 3s - loss: 1.2540 - val_loss: 1.2868
+Epoch 2/32
+5/5 - 3s - loss: 1.1214 - val_loss: 1.2895
+Epoch 3/32
+5/5 - 3s - loss: 1.0325 - val_loss: 1.2945
+Epoch 4/32
+5/5 - 3s - loss: 0.9257 - val_loss: 1.3108
+Epoch 5/32
+5/5 - 3s - loss: 0.8043 - val_loss: 1.3451
+Epoch 6/32
+5/5 - 3s - loss: 0.6604 - val_loss: 1.3984
+Epoch 7/32
+5/5 - 3s - loss: 0.5168 - val_loss: 1.4844
+Epoch 8/32
+5/5 - 3s - loss: 0.3893 - val_loss: 1.5599
+Epoch 9/32
+5/5 - 3s - loss: 0.2722 - val_loss: 1.5962
+Epoch 10/32
+5/5 - 3s - loss: 0.1667 - val_loss: 1.6002
+Epoch 11/32
+5/5 - 3s - loss: 0.0939 - val_loss: 1.6090
+Epoch 12/32
+5/5 - 3s - loss: 0.0516 - val_loss: 1.6127
+Epoch 13/32
+5/5 - 3s - loss: 0.0277 - val_loss: 1.6065
+Epoch 14/32
+5/5 - 3s - loss: 0.0150 - val_loss: 1.5909
+Epoch 15/32
+5/5 - 3s - loss: 0.0092 - val_loss: 1.5811
+Epoch 16/32
+5/5 - 3s - loss: 0.0052 - val_loss: 1.5882
+Epoch 17/32
+5/5 - 3s - loss: 0.0034 - val_loss: 1.5964
+Epoch 18/32
+5/5 - 3s - loss: 0.0024 - val_loss: 1.5970
+Epoch 19/32
+5/5 - 3s - loss: 0.0017 - val_loss: 1.5941
+Epoch 20/32
+5/5 - 3s - loss: 0.0011 - val_loss: 1.5952
+Epoch 21/32
+5/5 - 3s - loss: 7.4413e-04 - val_loss: 1.5950
+Epoch 22/32
+5/5 - 3s - loss: 5.0296e-04 - val_loss: 1.5921
+Epoch 23/32
+5/5 - 3s - loss: 3.8481e-04 - val_loss: 1.5910
+Epoch 24/32
+5/5 - 3s - loss: 2.8666e-04 - val_loss: 1.5920
+Epoch 25/32
+5/5 - 3s - loss: 1.8223e-04 - val_loss: 1.5934
+Epoch 26/32
+5/5 - 3s - loss: 1.3453e-04 - val_loss: 1.5931
+Epoch 27/32
+5/5 - 3s - loss: 9.8249e-05 - val_loss: 1.5925
+Epoch 28/32
+5/5 - 3s - loss: 6.3866e-05 - val_loss: 1.5927
+Epoch 29/32
+5/5 - 3s - loss: 4.6995e-05 - val_loss: 1.5927
+Epoch 30/32
+5/5 - 3s - loss: 3.0105e-05 - val_loss: 1.5922
+Epoch 31/32
+5/5 - 3s - loss: 2.3660e-05 - val_loss: 1.5922
+Epoch 32/32
+5/5 - 3s - loss: 1.4530e-05 - val_loss: 1.5926
+38/38 - 0s - loss: 1.3196e-05
+49963/49963 - 17s - loss: 1.5926
+3125/3125 - 2s - loss: 1.5932
+MLP training RMSE:  0.003632588535252872
+MLP test RMSE:  1.261972880088691
+MLP fresh RMSE:  1.2622177507251537
+128     16000   16000   0.003632588535252872    1.1070829981103647      0.8413033918285293      1.261972880088691       1.1301516148444117      0.8496139336024365      1.2622177507251537      1.131825416345
+9278    0.8491897727291341
+
+
