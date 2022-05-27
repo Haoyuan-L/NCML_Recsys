@@ -1530,6 +1530,116 @@ MLP fresh RMSE:  0.8907112280613657
 1491    0.8459669936819092
 
 
+python approx_dot.py --embedding_dim 64 --num_users 64000 --num_items 64000 --first_layer_mult 1 --learning_rate 0.001
+approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+approx_dot.py:102: RuntimeWarning: overflow encountered in long_scalars
+  [int((counter * num_train_samples) / num_samples)])
+Num training examples:  (46, 2, 64)
+Num test examples:  (6399954, 2, 64)
+Num fresh examples:  (100000, 2, 64)
+Trivial model training RMSE:  1.0868060640212598
+Trivial model test RMSE:  1.1299218527118229
+Trivial model fresh RMSE:  1.133904161272348
+Dot training RMSE:  0.8523301609923494
+Dot test RMSE:  0.8499935761362746
+Dot fresh RMSE:  0.8530453989429941
+2022-05-27 13:54:06.843413: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in
+performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 128)               0
+_________________________________________________________________
+dense (Dense)                (None, 128)               16512
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                2080
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 33
+=================================================================
+Total params: 26,881
+Trainable params: 26,881
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/32
+1/1 - 9s - loss: 1.2064 - val_loss: 1.2911
+Epoch 2/32
+1/1 - 8s - loss: 1.0996 - val_loss: 1.2878
+Epoch 3/32
+1/1 - 9s - loss: 1.0120 - val_loss: 1.2868
+Epoch 4/32
+1/1 - 8s - loss: 0.9380 - val_loss: 1.2872
+Epoch 5/32
+1/1 - 8s - loss: 0.8715 - val_loss: 1.2885
+Epoch 6/32
+1/1 - 8s - loss: 0.8108 - val_loss: 1.2905
+Epoch 7/32
+1/1 - 8s - loss: 0.7520 - val_loss: 1.2930
+Epoch 8/32
+1/1 - 8s - loss: 0.6938 - val_loss: 1.2959
+Epoch 9/32
+1/1 - 8s - loss: 0.6369 - val_loss: 1.2993
+Epoch 10/32
+1/1 - 8s - loss: 0.5802 - val_loss: 1.3031
+Epoch 11/32
+1/1 - 8s - loss: 0.5241 - val_loss: 1.3073
+Epoch 12/32
+1/1 - 9s - loss: 0.4690 - val_loss: 1.3120
+Epoch 13/32
+1/1 - 9s - loss: 0.4156 - val_loss: 1.3174
+Epoch 14/32
+1/1 - 9s - loss: 0.3640 - val_loss: 1.3238
+Epoch 15/32
+1/1 - 9s - loss: 0.3146 - val_loss: 1.3312
+Epoch 16/32
+1/1 - 9s - loss: 0.2675 - val_loss: 1.3399
+Epoch 17/32
+1/1 - 9s - loss: 0.2231 - val_loss: 1.3502
+Epoch 18/32
+1/1 - 9s - loss: 0.1823 - val_loss: 1.3621
+Epoch 19/32
+1/1 - 8s - loss: 0.1458 - val_loss: 1.3759
+Epoch 20/32
+1/1 - 8s - loss: 0.1139 - val_loss: 1.3916
+Epoch 21/32
+1/1 - 8s - loss: 0.0872 - val_loss: 1.4090
+Epoch 22/32
+1/1 - 8s - loss: 0.0656 - val_loss: 1.4274
+Epoch 23/32
+1/1 - 8s - loss: 0.0493 - val_loss: 1.4458
+Epoch 24/32
+1/1 - 8s - loss: 0.0378 - val_loss: 1.4633
+Epoch 25/32
+1/1 - 9s - loss: 0.0303 - val_loss: 1.4787
+Epoch 26/32
+1/1 - 9s - loss: 0.0261 - val_loss: 1.4909
+Epoch 27/32
+1/1 - 9s - loss: 0.0241 - val_loss: 1.4993
+Epoch 28/32
+1/1 - 8s - loss: 0.0232 - val_loss: 1.5039
+Epoch 29/32
+1/1 - 9s - loss: 0.0227 - val_loss: 1.5054
+Epoch 30/32
+1/1 - 8s - loss: 0.0221 - val_loss: 1.5044
+Epoch 31/32
+1/1 - 8s - loss: 0.0211 - val_loss: 1.5017
+Epoch 32/32
+1/1 - 8s - loss: 0.0198 - val_loss: 1.4978
+2/2 - 0s - loss: 0.0182
+199999/199999 - 48s - loss: 1.4978
+3125/3125 - 1s - loss: 1.4987
+MLP training RMSE:  0.13485130406036638
+MLP test RMSE:  1.2238598344276423
+MLP fresh RMSE:  1.2241985112448397
+64      64000   64000   0.13485130406036638     1.0868060640212598      0.8523301609923494      1.2238598344276423      1.1299218527118229      0.8499935761362746      1.2241985112448397      1.133904161272
+348     0.8530453989429941
+
+
+
 python approx_dot.py --embedding_dim 128 --num_users 4000 --num_items 4000 --first_layer_mult 1 --learning_rate 0.001    
 approx_dot.py:100: RuntimeWarning: overflow encountered in long_scalars
   [int((counter * num_train_samples) / num_samples)])
