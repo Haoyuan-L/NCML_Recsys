@@ -1,0 +1,32 @@
+\begin{tabular}{l|rrr|}
+\toprule
+{} &                                 Train Time & \begin{tabular}{@{}c@{}}Recommendation\\Time\end{tabular} & \begin{tabular}{@{}c@{}}Recommendation\\Throughput\end{tabular} \\
+\midrule
+Random                &                                          - &                                                  - &                                                  - \\
+TopPop                &                                          - &                                                  - &                                                  - \\
+\midrule
+UserKNN CF cosine     &                                          - &                                                  - &                                                  - \\
+UserKNN CF dice       &                                          - &                                                  - &                                                  - \\
+UserKNN CF jaccard    &                                          - &                                                  - &                                                  - \\
+UserKNN CF asymmetric &                                          - &                                                  - &                                                  - \\
+UserKNN CF tversky    &                                          - &                                                  - &                                                  - \\
+ItemKNN CF cosine     &                                          - &                                                  - &                                                  - \\
+ItemKNN CF dice       &                                          - &                                                  - &                                                  - \\
+ItemKNN CF jaccard    &                                          - &                                                  - &                                                  - \\
+ItemKNN CF asymmetric &                                          - &                                                  - &                                                  - \\
+ItemKNN CF tversky    &                                          - &                                                  - &                                                  - \\
+P3alpha               &                                          - &                                                  - &                                                  - \\
+RP3beta               &                                          - &                                                  - &                                                  - \\
+\midrule
+EASE R                &                     2.48 $\pm$ 0.02 [sec]  &                            10.21 $\pm$ 0.14 [sec]  &                                                592 \\
+SLIM BPR              &                                          - &                                                  - &                                                  - \\
+SLIM ElasticNet       &      137.96 [sec] / 2.30 $\pm$ 1.40 [min]  &                            10.69 $\pm$ 0.40 [sec]  &                                                548 \\
+MF BPR                &                                          - &                                                  - &                                                  - \\
+MF FunkSVD            &                                          - &                                                  - &                                                  - \\
+PureSVD               &                     0.63 $\pm$ 0.51 [sec]  &                             8.64 $\pm$ 0.55 [sec]  &                                                727 \\
+NMF                   &                                          - &                                                  - &                                                  - \\
+IALS                  &  3483.99 [sec] / 58.07 $\pm$ 100.40 [min]  &                             8.76 $\pm$ 0.25 [sec]  &                                                716 \\
+\midrule
+NeuMF                 &               8787.09 [sec] / 6.10 [hour]  &                         233.80 [sec] / 3.90 [min]  &                                                 26 \\
+\bottomrule
+\end{tabular}

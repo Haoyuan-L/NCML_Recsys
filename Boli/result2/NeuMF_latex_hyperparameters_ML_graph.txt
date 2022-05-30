@@ -1,0 +1,27 @@
+\begin{tabular}{ll|c}
+\toprule
+Algorithm & Hyperparameter &	 movielens1m \\
+\midrule
+P3alpha & - &           - \\
+\midrule
+RP3beta & - &           - \\
+\midrule
+\multirow{3}{*}{EASE R} & topK &           - \\
+     & normalize matrix &       False \\
+     & l2 norm &    1.36E+03 \\
+\midrule
+SLIM BPR  & - &           - \\
+\midrule
+SLIM ElasticNet & - &           - \\
+\midrule
+MF BPR  & - &           - \\
+\midrule
+MF FunkSVD  & - &           - \\
+\midrule
+PureSVD & num factors &          49 \\
+\midrule
+NMF & - &           - \\
+\midrule
+IALS & - &           - \\
+\bottomrule
+\end{tabular}

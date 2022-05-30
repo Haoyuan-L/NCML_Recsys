@@ -1,0 +1,33 @@
+\begin{tabular}{l|cc|cc|cc|}
+\toprule
+{} & \multicolumn{2}{c}{@ 1} & \multicolumn{2}{c}{@ 5} & \multicolumn{2}{c}{@ 10} \vline\\
+{} &               HR &             NDCG &               HR &             NDCG &               HR &             NDCG \\
+\midrule
+Random                &                - &                - &                - &                - &                - &                - \\
+TopPop                &                - &                - &                - &                - &                - &                - \\
+\midrule
+UserKNN CF cosine     &                - &                - &                - &                - &                - &                - \\
+UserKNN CF dice       &                - &                - &                - &                - &                - &                - \\
+UserKNN CF jaccard    &                - &                - &                - &                - &                - &                - \\
+UserKNN CF asymmetric &                - &                - &                - &                - &                - &                - \\
+UserKNN CF tversky    &                - &                - &                - &                - &                - &                - \\
+ItemKNN CF cosine     &                - &                - &                - &                - &                - &                - \\
+ItemKNN CF dice       &                - &                - &                - &                - &                - &                - \\
+ItemKNN CF jaccard    &                - &                - &                - &                - &                - &                - \\
+ItemKNN CF asymmetric &                - &                - &                - &                - &                - &                - \\
+ItemKNN CF tversky    &                - &                - &                - &                - &                - &                - \\
+P3alpha               &                - &                - &                - &                - &                - &                - \\
+RP3beta               &                - &                - &                - &                - &                - &                - \\
+\midrule
+EASE R                &  \textbf{0.2227} &  \textbf{0.2227} &  \textbf{0.5616} &  \textbf{0.3981} &  \textbf{0.7195} &  \textbf{0.4494} \\
+SLIM BPR              &                - &                - &                - &                - &                - &                - \\
+SLIM ElasticNet       &                - &                - &                - &                - &                - &                - \\
+MF BPR                &                - &                - &                - &                - &                - &                - \\
+MF FunkSVD            &                - &                - &                - &                - &                - &                - \\
+PureSVD               &  \textbf{0.2111} &  \textbf{0.2111} &           0.5351 &  \textbf{0.3786} &           0.6932 &           0.4300 \\
+NMF                   &                - &                - &                - &                - &                - &                - \\
+IALS                  &                - &                - &                - &                - &                - &                - \\
+\midrule
+NeuMF                 &           0.2031 &           0.2031 &           0.5404 &           0.3772 &           0.7088 &           0.4315 \\
+\bottomrule
+\end{tabular}
